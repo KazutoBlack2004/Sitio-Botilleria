@@ -9,10 +9,64 @@
     <link rel="stylesheet" href="estilos.css"> <!-- Agregar la referencia al archivo CSS -->
 </head>
 
-<!------------------------------------------------------------------------------------------------------------->
-<body class="content" background="Imagenes/fondo.jpg" style="background-size: 100%;">
-<!--                                   Es la imagen de fondo del sitio                                       -->    
-    
+<style>
+    /* imagen de fondo */
+    .login-container {
+        background-image: url('imagenes/login.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Estilos para el formulario */
+    .login-form {
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 400px; /* Ancho de la caja sombreada */
+    height: 500px; /* Alto de la caja sombreada */
+    backdrop-filter: brightness(40%);
+    flex-direction: column;
+    display: flex;
+    gap: 20px; /* Espacio entre cada elemento */
+    background-position: center;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.login-heading {
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+    color: #ffffff; /* Cambiar color del texto */
+}
+
+.login-form label {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+
+.login-form input {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: #ffffff; /* Cambiar color del texto */
+}
+</style>  
+
+
+
 <!------------------------------------------------------------------------------------------------------------->
 <!--                                                NavBar                                                   -->
 
@@ -68,19 +122,22 @@
 
 <!------------------------------------------------------------------------------------------------------------->
 <!--                                                login                                                    -->
-
-    <main>
-        <div class="login">
-            <form>
-                <h1 class="LOG">LOG IN</h1>
-                <label>Username</label>
-                <input type="text" placeholder="Usuario" required>
-                <label>Password</label>
-                <input type="password" placeholder="contraseña" required>
-                <input type="submit">
-            </form>
+<div class="login-container">
+    <form class="login-form">
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="login-form-label">Email address</label>
+            <input type="email" class="form-control login-form-input" id="exampleInputEmail1" aria-describedby="emailHelp">        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="login-form-label">Password</label>
+            <input type="password" class="form-control login-form-input" id="exampleInputPassword1">
         </div>
-    </main>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
 
 <!------------------------------------------------------------------------------------------------------------->    
 <!--                                          Footer                                                         -->   
@@ -102,6 +159,9 @@
 <!------------------------------------------------------------------------------------------------------------->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </body>
 </html>
