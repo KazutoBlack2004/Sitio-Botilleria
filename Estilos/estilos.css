@@ -1,0 +1,264 @@
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #a07f5e; /* Color de fondo del encabezado */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: auto;
+}
+
+a{
+    text-decoration: none;
+    color:#212121
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 75px;
+    margin-right: 10px;
+}
+
+
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+/* contiene nav*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}        
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+/* contiene los botones del menu*/
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    }
+    .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 163, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    .button:hover::before {
+    scale: 3;
+    }
+    .button:hover {
+    color: #212121;
+    
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgb(161,126,126);
+    }
+    .button:active {
+    scale: 1;
+    }
+
+
+.content {
+    flex: 2; /* Hace que el contenido ocupe todo el espacio restante */
+}
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+footer {
+    background-color: #a07f5e;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    bottom: 0;
+
+
+}
+
+.footer-text {
+    font-size: 0.2em; /* Tamaño de fuente reducido */
+    line-height: 1.5;
+}
+
+.footer-text p {
+    font-size: 0.2em; /* Tamaño de fuente más pequeño para el párrafo */
+    margin: 0; /* Eliminar el margen predeterminado del párrafo */
+    padding: 0; /* Eliminar el padding predeterminado del párrafo */
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-text a:hover {
+    color: #ccc;
+}
+
+/* Estilos adicionales para el texto de copyright */
+.copyright-text {
+    position: initial;
+    bottom: 5px; /* Colocar en la esquina inferior izquierda */
+    left: 20px; /* Colocar en la esquina inferior izquierda */
+    margin: 0;
+}
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    border: 1px solid black;/*--le genera un borde--*/
+    width: 400px;/*--para el tamaño--*/
+    height: 500px;
+    background-image: url('assets/login.png');
+    /*--no me funciono pero queria ponerle un fondo al login y no logre use videos que tengo guardados en mi instagram--*/
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0,75);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+form{
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(40%);
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+    background-position: center;
+}
+.LOG {font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0,5);
+    margin-bottom: 60px;
+}
+label{
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+input{
+    background-color: rgba(255,255,255,0.3);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------GALERIA-----------------------------------------*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.alcohol{
+    border-radius: 10px;
+    background-color: wheat;
+    width: 350px;
+
+}
+.alcohol:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+
+}
+.alcohol img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .square {
+    border: 1px solid black;
+    background-color: white;
+    width: 300px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+  }
+  
+  .info-container {
+    padding: 20px;
+  }
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
